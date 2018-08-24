@@ -10,15 +10,22 @@ package noobsAcademy.printthepattern;
  */
 public class GfG {
     static void printPat(int n) {
-	// Tip: implemented this way:
-	// it is easier to develop and easier to test
-	// ;)
 	System.out.print(getPat(n));
     }
 
     static String getPat(int n) {
-	// TODO
-	return null;
+	int m = n;
+	StringBuilder sb = new StringBuilder();
+	while (m > 0) {
+	    for (int i = n; i > 0; i--) {
+		for (int j = 0; j < m; j++) {
+		    sb.append(i);
+		    sb.append(" ");
+		}
+	    }
+	    sb.append("$");
+	    m--;
+	}
+	return sb.toString();
     }
-
 }
